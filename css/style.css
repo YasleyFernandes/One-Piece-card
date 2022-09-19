@@ -64,4 +64,6 @@ body{
     transform: scale3d(1.1, 1.1, 1);
 }
 
-
+.card{
+    transition:0.5s;
+}
