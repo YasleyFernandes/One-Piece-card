@@ -1,8 +1,91 @@
-body{  
-    font-family: Roboto, sans-serif;
-    background-color: var(--body-bg);
+:root
+{
+    --body-bg: #fafafa;
+    --card-bg: #222222;
+    --title-bg:#fafafa;
+    --scdtext-bg:#fafafa;
+    --btttext-bg:#fafafa;
 }
-.content{
+
+.dark-mode:root
+{
+    --body-bg: #222222; 
+    --card-bg: #fafafa;
+    --title-bg:#536191;
+    --scdtext-bg:#7281b3;
+    --btttext-bg:#243057;
+}
+
+body
+{  
+    font-family: Roboto, sans-serif;
+    font-size: 1.1em;
+    background-color: var(--body-bg);
+    margin:0;
+}
+
+.switch
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch .switch-wrapper
+{
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+
+.switch .switch-wrapper .switch-button
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background-color:#222222;
+}
+
+.switch .switch-wrapper > input
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch .switch-wrapper .switch-button:before
+{
+    content: "";
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    transition: .4s all ease;
+    background-color: #fafafa;
+}
+
+.switch .switch-wrapper input:checked + .switch-button
+{
+    background-color: #a1a1a1;
+}
+
+.switch .switch-wrapper input:checked + .switch-button::before
+{
+    transform: translateX(26px);
+}
+
+.content
+{
     display:flex;
     justify-content:center;
     align-items: center;
@@ -11,58 +94,75 @@ body{
     height: 100vh;
 }
 
-.card{
-    background:white;
-    box-shadow: 0px 2px 19px #36455757;
+.card
+{
+    background:var(--card-bg);
+    box-shadow: 0px 2px 19px #0000006e;
     border-radius:20px;
     width:450px;
 }
 
-.mediaCard{
+.mediaCard
+{
     background: url("https://classic.exame.com/wp-content/uploads/2022/08/one-piece.jpg?quality=70&strip=info&w=1024") center/cover;
     height: 350px;
     width: 100%;
 }
 
-.title{
-    color: #536191;
+.title
+{
+    color: var(--title-bg);
 }
 
-.secondText{
-    color:#7e8e9c;
+.secondText
+{
+    color:var(--scdtext-bg);
 }
 
-.bottomText{
-    color:#3d5163; 
+.bottomText
+{
+    color:var(--btttext-bg); 
 }
 
-.topCard{
+.topCard
+{
     padding:20px;
     padding-top: 0px;
 }
 
-.bottomCard{
-    padding:20px;
+.topCard .title
+{
+    text-align: center;
 }
 
-.action{
+.bottomCard
+{
+    padding:20px 20px 40px 20px;
+}
+
+.action
+{
     background: none;
     border: none;
     padding-top:30px;
     cursor: pointer;
 }
 
-.action2{
+.action2
+{
     background: none;
     border: none;
     padding-top:30px;
     cursor: pointer;
 }
 
-.card:hover{
+.card:hover
+{
     transform: scale3d(1.1, 1.1, 1);
 }
 
-.card{
+.card
+{
     transition:0.5s;
 }
+
