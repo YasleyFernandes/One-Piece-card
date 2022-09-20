@@ -5,6 +5,8 @@
     --title-bg:#fafafa;
     --scdtext-bg:#fafafa;
     --btttext-bg:#fafafa;
+    --prtext-co: #000000;
+
 }
 
 .dark-mode:root
@@ -14,6 +16,7 @@
     --title-bg:#536191;
     --scdtext-bg:#7281b3;
     --btttext-bg:#243057;
+    --prtext-co: #fafafa;
 }
 
 body
@@ -181,5 +184,9 @@ footer > p
 .card
 {
     transition:0.5s;
+}
+
+footer .piratefan{
+    color: var(--prtext-co);
 }
 
